@@ -1,0 +1,6 @@
+<zk xmlns:h="native">
+	<h:h1>Apply on zk component</h:h1>
+	<label sclass="text-3xl font-bold underline" value="hello world!"/>
+	<h:h1>Apply on HTML tag</h:h1>
+	<h:button class="px-4 py-2 font-semibold text-sm bg-cyan-500 text-white rounded-full shadow-sm">rounded</h:button>
+</zk>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk>
+	<device-config>
+		<device-type>ajax</device-type>
+		<embed><![CDATA[
+        <link rel="stylesheet" href="/tailwindcss/css/output.css">
+    ]]></embed>
+	</device-config>
+	
+</zk>
