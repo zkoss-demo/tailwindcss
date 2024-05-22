@@ -29,13 +29,6 @@
         <button label="Go!" class="bg-blue-500 text-white py-2 px-4 rounded-full animate-bounce"/>
     </window>
 
-    <title value="Slide In/Out"/>
-    <window border="normal">
-        <h:div class="transform transition-transform duration-1000 ease-in-out active:translate-x-full">
-            press to see slide in content from the right.
-        </h:div>
-    </window>
-
 
     <title value="Pulse"/>
     Use a pulsing effect for alerts or notifications to grab user attention.

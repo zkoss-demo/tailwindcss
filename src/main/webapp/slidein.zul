@@ -1,0 +1,26 @@
+<zk>
+    <window title="Slide-In Side Panel Example" border="normal" width="600px">
+        <label value="Main Content Area"/>
+        <button id="open-panel-button" label="Open Panel" onClick='togglePanel()'/>
+    </window>
+    <!-- Slide-In Side Panel -->
+    <vlayout id="sidePanel"
+             class="fixed top-0 right-0 w-64 h-full bg-gray-100 shadow-lg transform transition-transform duration-500 ease-in-out translate-x-full z-50">
+        <button label="Close" class="m-4" onClick='togglePanel()'/>
+        <label value="Panel Content" class="m-4"/>
+        <label value="Additional Info" class="m-4"/>
+    </vlayout>
+    <zscript><![CDATA[
+    public void togglePanel() {
+        if (sidePanel.getSclass().contains("translate-x-full")) {
+            sidePanel.removeSclass("translate-x-full");
+            sidePanel.addSclass("translate-x-0");
+        } else {
+            sidePanel.removeSclass("translate-x-0");
+            sidePanel.addSclass("translate-x-full");
+        }
+    }
+  ]]></zscript>
+
+
+</zk>
