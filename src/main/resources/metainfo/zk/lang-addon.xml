@@ -1,0 +1,10 @@
+<zk>
+    <addon-name>mycomponent</addon-name>
+    <language-name>xul/html</language-name>
+    <depends>zuti</depends>
+
+    <component>
+        <component-name>title</component-name>
+        <template-uri>/title.zul</template-uri>
+    </component>
+</zk>
