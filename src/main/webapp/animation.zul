@@ -13,7 +13,6 @@
 
 
 
-
     <title value="Fade in/out"/>
     <button label="fade in modal" onClick='confirmWin.visible=true;confirmWin.addSclass("opacity-100")'/>
     <window id="confirmWin" title="Are you sure" mode="modal" hflex="min" border="normal" visible="false"
@@ -25,35 +24,40 @@
 
     <title value="Bounce"/>
     Call-to-action buttons to draw attention
-    <window border="normal">
-        <button label="Cancel" class="py-2 px-4"/>
-        <button label="Go!" class="py-2 px-4 animate-bounce"/>
+    <window border="normal" title="Order Confirmation" width="50%" sclass="m-auto">
+        <button label="Cancel" class="mx-1"/>
+        <button label="Submit Order!" class="mx-1 animate-bounce"/>
     </window>
 
 
     <title value="Pulse"/>
     Use a pulsing effect for alerts or notifications to grab user attention.
-    <h:div class="bg-red-500 text-white p-4 rounded-lg animate-pulse">
+    <h:div class="bg-red-500 text-white p-4 rounded-lg animate-pulse m-auto w-1/2">
         Important Notification
     </h:div>
 
 
     <title value="Expand/Collapse"/>
-    <button label="Toggle Collapse" onClick="toggleCollapse()"/>
+    <button label="Toggle Collapse" sclass="my-2" onClick="toggleCollapse()"/>
     <zscript><![CDATA[
     void toggleCollapse(){
         area.setHeight(area.getHeight().equals("0") ? "100%" : "0");
     }
     ]]></zscript>
-    <div height="500px">
-        <div id="area" class="transition-height duration-500 ease-in-out overflow-hidden bg-orange-300" height="0">
+    <div height="300px" sclass="my-1">
+        <div id="area" class="transition-height duration-500 ease-in-out overflow-hidden bg-orange-300 rounded-lg
+p-2" height="0">
             Collapsible content goes here.
         </div>
+    </div>
+    <div class="transition-all duration-500 ease-in-out overflow-hidden bg-orange-300 rounded-lg p-2 h-0 hover:h-40">
+        Collapsible content goes here (hover to expand).<h:br/>
+        more content here..
     </div>
 
 
     <title value="Pop-in"/>
-    <button label="pop in alert" onClick="popin()"/>
+    <button label="pop in alert" sclass="my-1" onClick="popin()"/>
     <zscript><![CDATA[
 public void popin(){
     alertbox.removeSclass("scale-0");
@@ -76,8 +80,8 @@ public void popin(){
 
     <title value="Ping"/>
     <h:span class="relative inline-flex">
-        <button label="Transactions" sclass="inline-flex"/>
-        <h:span class="relative flex h-3 w-3 top-0 right-2 -mt-1 -mr-1">
+        <button label="My Messages" sclass="inline-flex my-1"/>
+        <h:span class="relative flex h-3 w-3 top-0 right-2 mt-0 -mr-1">
             <h:span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></h:span>
             <h:span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></h:span>
         </h:span>

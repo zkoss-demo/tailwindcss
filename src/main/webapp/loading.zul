@@ -2,7 +2,7 @@
     <title value="Loading Spinner"/>
     <button label="loading spinner"
             onClick='loadingEffect.visible=true; Events.echoEvent("onDoOp", self, null);'
-            onDoOp='Thread.sleep(3000);loadingEffect.visible=false;'/>
+            onDoOp='Thread.sleep(5000);loadingEffect.visible=false;'/>
     <div id="loadingEffect" visible="false" class="fixed inset-0 flex items-center justify-center bg-white bg-opacity-75 z-50">
         <h:div class="animate-spin rounded-full h-16 w-16 border-t-8 border-blue-500"></h:div>
     </div>
