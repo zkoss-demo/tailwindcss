@@ -12,7 +12,7 @@ Just follow [the steps with Tailwind CLI](https://tailwindcss.com/docs/installat
 2. configure `zul` into template paths in `tailwind.config.js`
 3. Add the Tailwind directives to your CSS
 4. Start the Tailwind CLI build process <br/>
-`npx tailwindcss -i ./src/input.css -o ./src/output.css --watch`
+`npx tailwindcss -i ./src/main/webapp/css/input.css -o ./src/main/webapp/css/output.css --watch`
 5. Start using Tailwind in your zul
 
 # Details

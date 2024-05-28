@@ -1,7 +1,8 @@
 <zk>
     <window title="Slide-In Side Panel Example" border="normal" width="600px" sclass="m-2">
         <label value="Main Content Area"/>
-        <button id="open-panel-button" label="Open Panel" onClick='togglePanel()'/>
+        <button id="open-panel-button" class="mx-1" label="Open Panel" onClick='togglePanel()'/>
+        <a href="https://www.zkoss.org/zkdemo/layout/drawer" target="_blank">(ZK has a drawer component)</a>
     </window>
     <!-- Slide-In Side Panel -->
     <vlayout id="sidePanel"
