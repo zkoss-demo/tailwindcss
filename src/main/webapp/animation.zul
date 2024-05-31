@@ -87,4 +87,21 @@ public void popin(){
         </h:span>
     </h:span>
     <separator height="50px"/>
+
+
+        <title value="Slide-In Notification"/>
+        <button label="Show Notification" onClick='showNotification()'/>
+        <zscript><![CDATA[
+    public void showNotification() {
+        notification.addSclass("translate-y-0");
+        notification.removeSclass("-translate-y-full");
+    }
+    ]]></zscript>
+        <div id="notification" class="fixed top-0 left-0 w-full bg-green-500 text-white p-4 transform -translate-y-full transition-transform duration-500 ease-in-out">
+            <span>This is a slide-in notification.</span>
+        </div>
+
+    <title value="Expandable Search Bar"/>
+    <textbox placeholder="Search..." class="w-16 p-2 transition-width duration-300 focus:w-64"/>
+
 </zk>
