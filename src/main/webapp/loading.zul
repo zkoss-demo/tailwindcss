@@ -1,3 +1,4 @@
+<?import org.zkoss.zk.util.*?>
 <zk xmlns:h="native">
     <title value="Loading Spinner"/>
     <button label="loading spinner"
@@ -6,4 +7,6 @@
     <div id="loadingEffect" visible="false" class="fixed inset-0 flex items-center justify-center bg-white bg-opacity-75 z-50">
         <h:div class="animate-spin rounded-full h-16 w-16 border-t-8 border-blue-500"></h:div>
     </div>
+
+    <button id="longOp" iconSclass="z-icon-refresh" onClick='SclassHelper.toggleIconSclass(self, "animate-spin", "")'/>
 </zk>

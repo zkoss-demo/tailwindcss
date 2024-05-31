@@ -1,3 +1,4 @@
+<?import org.zkoss.zk.util.*?>
 <zk>
     <window title="Slide-In Side Panel Example" border="normal" width="600px" sclass="m-2">
         <label value="Main Content Area"/>
