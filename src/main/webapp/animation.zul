@@ -1,16 +1,20 @@
+<?import org.zkoss.zk.util.*?>
 <zk xmlns:h="native" xmlns:x="xhtml">
     <title value="Hover Effect"/>
     Apply hover effects to buttons or links to enhance interactivity.
     <vlayout class="inline-">
-    some classes doesn't work on zk components, because zk components have their own styles.
-    <a href="#" class="inline-block bg-blue-300 p-2 rounded hover:bg-blue-500 transition-colors text-yellow-100 duration-300">text is not yellow</a>
-    You can use HTML tag or specify zclass to remove the existing styles.
-    <a href="#" zclass="text-yellow-100" class="inline-block bg-blue-300 p-2 rounded hover:bg-blue-500 transition-colors duration-300"
-    onClick="org.zkoss.zk.ui.util.Notification.show(event.toString())">
-        Hover over me
-    </a>
+        some classes doesn't work on zk components, because zk components have their own styles.
+        <a href="#"
+           class="inline-block bg-blue-300 p-2 rounded hover:bg-blue-500 transition-colors text-yellow-100 duration-300">
+            text is not yellow
+        </a>
+        You can use HTML tag or specify zclass to remove the existing styles.
+        <a href="#" zclass="text-yellow-100"
+           class="inline-block bg-blue-300 p-2 rounded hover:bg-blue-500 transition-colors duration-300"
+           onClick="org.zkoss.zk.ui.util.Notification.show(event.toString())">
+            Hover over me
+        </a>
     </vlayout>
-
 
 
     <title value="Fade in/out"/>
@@ -51,7 +55,8 @@ p-2" height="0">
         </div>
     </div>
     <div class="transition-all duration-500 ease-in-out overflow-hidden bg-orange-300 rounded-lg p-2 h-0 hover:h-40">
-        Collapsible content goes here (hover to expand).<h:br/>
+        Collapsible content goes here (hover to expand).
+        <h:br/>
         more content here..
     </div>
 
@@ -89,17 +94,13 @@ public void popin(){
     <separator height="50px"/>
 
 
-        <title value="Slide-In Notification"/>
-        <button label="Show Notification" onClick='showNotification()'/>
-        <zscript><![CDATA[
-    public void showNotification() {
-        notification.addSclass("translate-y-0");
-        notification.removeSclass("-translate-y-full");
-    }
-    ]]></zscript>
-        <div id="notification" class="fixed top-0 left-0 w-full bg-green-500 text-white p-4 transform -translate-y-full transition-transform duration-500 ease-in-out">
-            <span>This is a slide-in notification.</span>
-        </div>
+    <title value="Slide-In Notification"/>
+    <button label="Show Notification"
+            onClick='SclassHelper.toggle(notification, "translate-y-0", "-translate-y-full")'/>
+    <div id="notification"
+         class="fixed top-0 left-0 w-full bg-green-500 text-white p-4 transform -translate-y-full transition-transform duration-500 ease-in-out">
+        <span>This is a slide-in notification.</span>
+    </div>
 
     <title value="Expandable Search Bar"/>
     <textbox placeholder="Search..." class="w-16 p-2 transition-width duration-300 focus:w-64"/>
