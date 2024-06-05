@@ -86,7 +86,7 @@ p-2" height="0">
             onClick='SclassHelper.toggle(notification, "translate-y-0", "-translate-y-full")'/>
     <div id="notification"
          class="fixed top-0 left-0 w-full bg-green-500 text-white p-4 transform -translate-y-full transition-transform duration-500">
-        <span>This is a slide-in notification.</span>
+        This is a slide-in notification
     </div>
 
     <title value="Expandable Search Bar"/>
