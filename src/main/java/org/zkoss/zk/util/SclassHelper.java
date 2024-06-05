@@ -25,7 +25,7 @@ public class SclassHelper {
         toggle(component, sclass, "");
     }
 
-    public static void toggleIconSclass(LabelImageElement component, String class1, String class2 ){
+    public static void toggleIconSclass(LabelImageElement component, String class1, String class2){
         String iconSclass = component.getIconSclass();
         if (iconSclass != null && iconSclass.contains(class1)) {
             removeIconSclass(component, class1);
@@ -38,36 +38,31 @@ public class SclassHelper {
 
 
     public static void addIconSclass(LabelImageElement component, String cssClass) {
-        if (!Strings.isEmpty(cssClass)) {
-            String iconSclass = component.getIconSclass();
-            if (iconSclass == null) {
-                component.setIconSclass(cssClass);
-            } else {
-                String[] input = cssClass.split(" ");
-                StringBuilder stringBuilder = new StringBuilder(iconSclass);
-                String cur = " " + iconSclass + " ";
-                for (String inputClass : input) {
-                    if (!cur.contains(" " + inputClass + " ")) {
-                        stringBuilder.append(" ").append(inputClass);
-                    }
-                }
-                component.setIconSclass(stringBuilder.toString());
+        if (Strings.isEmpty(cssClass)) return;
+
+        String iconSclass = component.getIconSclass();
+        if (iconSclass == null) {
+            component.setIconSclass(cssClass);
+            return;
+        }
+
+        String[] inputClasses = cssClass.split(" ");
+        for (String inputClass : inputClasses) {
+            if (!iconSclass.contains(inputClass)) {
+                iconSclass += " " + inputClass;
             }
         }
+        component.setIconSclass(iconSclass.trim());
     }
 
     public static void removeIconSclass(LabelImageElement component, String cssClass) {
         String sclass = component.getIconSclass();
         if (sclass != null) {
-            String[] input = cssClass.split(" ");
-            String cur = " " + sclass + " ";
-            for (String inputClass : input) {
-                String curInput = " " + inputClass + " ";
-                if (cur.contains(curInput)) {
-                    cur = cur.replace(curInput, " ");
-                }
+            String[] inputClasses = cssClass.split(" ");
+            for (String inputClass : inputClasses) {
+                sclass = sclass.replace(inputClass, "");
             }
-            component.setIconSclass(cur.trim());
+            component.setIconSclass(sclass.trim());
         }
     }
 }
